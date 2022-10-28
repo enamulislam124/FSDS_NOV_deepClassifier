@@ -16,8 +16,8 @@ class DataIngestion:
         if not os.path.exists(self.config.local_data_file):
             logger.info("Download started...")
             filename, headers = request.urlretrieve(
-                url = self.config.source_URL,
-                filename = self.config.local_data_file
+                url=self.config.source_URL,
+                filename=self.config.local_data_file
             )
             logger.info(f"{filename} download! with following info: \n{headers}")
         else:
